@@ -10,5 +10,5 @@ export async function deleteStudentById(studentId: string) {
 }
 
 export async function getAllStudents() {
-  return await Student.find();
+  return await Student.find().sort({ createdAt: -1 });
 }
